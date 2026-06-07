@@ -10,6 +10,16 @@ visualized, and clustered variant-effect predictions.
 > ESM predictions are useful approximations — not ground truth — and are most
 > valuable for prioritizing and exploring large sets of variants.
 
+## Run in Google Colab
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kouroshSA/ESM-variant-effect-tools/blob/master/colab/ESM_variant_effect_tools.ipynb)
+
+Click the badge to open a ready-to-run notebook — **no local installation
+required**. It clones this repository, installs the dependencies, runs the full
+demo workflow on a free GPU, and lets you upload your own sequences. Just set
+**Runtime → Change runtime type → GPU** first. The notebook lives in
+[`colab/ESM_variant_effect_tools.ipynb`](./colab/ESM_variant_effect_tools.ipynb).
+
 ## What are ESM models?
 
 **ESM (Evolutionary Scale Modeling)** is a family of open-source *protein
