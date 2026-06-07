@@ -1,0 +1,27 @@
+1. Run esm2 to predict probablity values
+
+$python ESM_predict_mutation_effects.py input_sequences.fasta output_predictions.csv --cuda
+
+e.g.:
+
+$python ESM_predict_mutation_effects.py LDH_variants.fasta LDH_variants.csv --cuda
+
+2. Calculate and visualize variants from a reference (WT or WT proxy)
+$python python calculate_variant_scores_with_proxy_PCA-annoy.py WT_LDHA.fasta LDH_variants.fasta WT_LDHA.csv output_all_predictions.csv --perform_pca wt_sequence.fasta variants_sequences.fasta wt_mutation_data.csv cumulative_scores.csv --perform_pca
+
+e.g.:
+$python calculate_variant_scores_with_proxy_PCA-annoy.py WT_LDHA.fasta LDH_variants.fasta WT_LDHA.csv output_all_predictions.csv --perform_pca
+
+3. Mutation effect in a protein
+
+$python visualize_mutation_effects_indel_adjust_logo2.py output_predictions.csv test1 --wt_sequence WT_LDHA.fasta --variant_sequences LDH_variants.fasta
+
+
+
+
+$python visualize_mutation_effects_indel_adjust_logo2.py output_predictions.csv test1 --wt_sequence WT_LDHA.fasta --variant_sequences LDH_variants.fasta --positions 33 66 --ranges 24-33
+
+
+
+
+

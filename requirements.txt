@@ -1,0 +1,17 @@
+# requirements for ESM tools
+# if cuda is not installed, first do: pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117
+
+# install the rest by: pip install -r requirements.txt
+# if tqdm is not working after pip installation, try conda install tqdm
+
+
+pandas
+fair-esm
+biopython
+tqdm
+numpy
+scikit-learn
+matplotlib
+seaborn
+annoy
+logomaker
