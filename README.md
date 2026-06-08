@@ -120,6 +120,32 @@ python visualize_mutation_effects_indel_adjust_logo2.py \
 - `WT_LDHA.fasta` / `LDH_variants.fasta` — a wild-type LDHA sequence and a small
   set of variants for the demo workflow.
 
+## Example outputs
+
+The figures below were produced by the visualizer
+(`visualize_mutation_effects_indel_adjust_logo2.py`) for an example variant,
+`Sample_63`, and are included in [`examples/`](./examples).
+
+**Mutation-effect heatmap** — the delta log-probability of every single
+substitution across all wild-type positions (x-axis) and all 20 amino acids
+(y-axis). Blue cells are substitutions the model disfavors (likely destabilizing);
+red cells are favored ones.
+
+![Mutation effects heatmap for Sample_63](examples/Sample_63_heatmap.png)
+
+**Per-position boxplot** — the distribution of substitution effects at each
+position along the sequence, showing which residues are mutation-sensitive
+(low, tight boxes) versus tolerant (boxes centered near or above zero).
+
+![Mutation effects by position for Sample_63](examples/Sample_63_position_boxplot.png)
+
+**Average effect by amino acid** — the mean effect of mutating *to* each amino
+acid, ranked. Here, substitutions to tryptophan (W) and proline (P) are the most
+destabilizing on average, while alanine (A), threonine (T), and serine (S) are
+the best tolerated.
+
+![Average mutation effects by amino acid for Sample_63](examples/Sample_63_aa_barplot.png)
+
 ## Acknowledgments & citation
 
 These tools are wrappers around the **ESM** models and the `fair-esm` library by
